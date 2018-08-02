@@ -1,0 +1,8 @@
+spring:
+  main:
+    banner-mode: 'off'
+amq:
+  url: amqp://localhost:61616
+  username: admin
+  password: admin
+  queue: mailbox

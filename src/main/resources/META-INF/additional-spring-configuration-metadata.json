@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "amq.url",
+    "type": "java.lang.String",
+    "description": "A description for 'amq.url'"
+  },
+  {
+    "name": "amq.username",
+    "type": "java.lang.String",
+    "description": "A description for 'amq.username'"
+  },
+  {
+    "name": "amq.password",
+    "type": "java.lang.String",
+    "description": "A description for 'amq.password'"
+  },
+  {
+    "name": "amq.password",
+    "type": "java.lang.String",
+    "description": "A description for 'amq.password'"
+  },
+  {
+    "name": "amq.queue",
+    "type": "java.lang.String",
+    "description": "A description for 'amq.queue'"
+  },
+  {
+    "name": "amq.topic",
+    "type": "java.lang.String",
+    "description": "A description for 'amq.topic'"
+  }
+]}
