@@ -19,35 +19,35 @@ import org.springframework.jms.config.JmsListenerContainerFactory;
 @EnableJms
 public class Application {
 
-    @Value("${amq.url}")
-    private String connectionUrl;
-
-    @Value("${amq.username}")
-    private String user;
-
-    @Value("${amq.password}")
-    private String password;
+//    @Value("${amq.url}")
+//    private String connectionUrl;
+//
+//    @Value("${amq.username}")
+//    private String user;
+//
+//    @Value("${amq.password}")
+//    private String password;
 
     public Application() {
     }
 
-    @Bean
-    public JmsPoolConnectionFactory jmsPoolConnectionFactory() {
-        final JmsConnectionFactory jmsConnectionFactory = new JmsConnectionFactory(user, password, connectionUrl);
-        final JmsPoolConnectionFactory poolConnectionFactory = new JmsPoolConnectionFactory();
-        poolConnectionFactory.setConnectionFactory(jmsConnectionFactory);
-        poolConnectionFactory.setUseAnonymousProducers(false);
-        return poolConnectionFactory;
-    }
-
-    @Bean
-    public JmsListenerContainerFactory<?> myFactory(ConnectionFactory connectionFactory, DefaultJmsListenerContainerFactoryConfigurer configurer) {
-        DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
-        // This provides all boot's default to this factory, including the message converter
-        configurer.configure(factory, connectionFactory);
-        // You could still override some of Boot's default if necessary.
-        return factory;
-    }
+//    @Bean
+//    public JmsPoolConnectionFactory jmsPoolConnectionFactory() {
+//        final JmsConnectionFactory jmsConnectionFactory = new JmsConnectionFactory(user, password, connectionUrl);
+//        final JmsPoolConnectionFactory poolConnectionFactory = new JmsPoolConnectionFactory();
+//        poolConnectionFactory.setConnectionFactory(jmsConnectionFactory);
+//        poolConnectionFactory.setUseAnonymousProducers(false);
+//        return poolConnectionFactory;
+//    }
+//
+//    @Bean
+//    public JmsListenerContainerFactory<?> myFactory(ConnectionFactory connectionFactory, DefaultJmsListenerContainerFactoryConfigurer configurer) {
+//        DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
+//        // This provides all boot's default to this factory, including the message converter
+//        configurer.configure(factory, connectionFactory);
+//        // You could still override some of Boot's default if necessary.
+//        return factory;
+//    }
 
     public static void main(String[] args) {
         // Launch the application

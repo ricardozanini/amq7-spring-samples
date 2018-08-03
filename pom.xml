@@ -20,6 +20,10 @@
 		<qpid.version>0.34.0.redhat-00002</qpid.version>
 		<jms-pool.version>1.0.1.redhat-00002</jms-pool.version>
 
+		<!-- AMQP Spring Starter -->
+		<amqp-10-jms-spring.version>2.0.1</amqp-10-jms-spring.version>
+		
+		
 		<!-- maven plugin versions -->
 		<fabric8.maven.plugin.version>3.1.80.redhat-000022</fabric8.maven.plugin.version>
 		<maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
@@ -43,14 +47,9 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-activemq</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.apache.activemq</groupId>
-					<artifactId>activemq-broker</artifactId>
-				</exclusion>
-			</exclusions>
+			<groupId>org.amqphub.spring</groupId>
+			<artifactId>amqp-10-jms-spring-boot-starter</artifactId>
+			<version>${amqp-10-jms-spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>

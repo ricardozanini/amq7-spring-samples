@@ -2,7 +2,14 @@ spring:
   main:
     banner-mode: 'off'
 amq:
-  url: amqp://localhost:61616
-  username: admin
-  password: admin
   queue: mailbox
+amqphub:
+  amqp10jms:
+    remote-url: amqp://localhost:61616
+    username: admin
+    password: admin
+    client-id: springJmsSample
+    pool:
+      enabled: true
+      explicit-producer-cache-size: 10
+      use-anonymous-producers: false

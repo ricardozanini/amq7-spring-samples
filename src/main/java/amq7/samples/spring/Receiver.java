@@ -21,7 +21,7 @@ public class Receiver {
     public Receiver() {
     }
 
-    @JmsListener(destination = "${amq.queue}", containerFactory = "myFactory")
+    @JmsListener(destination = "${amq.queue}")
     public void receiveMessage(String emailJson) throws JsonParseException, JsonMappingException, IOException {
         final Email email = mapper.readValue(emailJson, Email.class);
         LOGGER.info("Received: {}", email);
