@@ -1,3 +1,5 @@
+This example was merged with the [Apache Artemis](https://github.com/apache/activemq-artemis/tree/master/examples/features/standard/spring-boot-integration) project and won't receive more updates.
+
 ## AMQ7 client with Spring JMS
 
 This is a small sample of how to send and consume messages using [Spring JMS](https://spring.io/guides/gs/messaging-jms/), [QPID](https://qpid.apache.org/components/jms/index.html) and [JMS Pool](https://github.com/messaginghub/pooled-jms) to a Red Hat AMQ7 broker. Use it as a reference for your own implementation.
